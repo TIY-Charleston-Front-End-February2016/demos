@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+header, footer {
+  display: block;
+  width: 100%;
+}
+header {
+  background-color: chartreuse;
+}
+footer {
+  background-color: grey;
+}
+.row {
+  width: 100%;
+  display: block;
+  clear: both;
+}
+.row:before, .row:after {
+  content: "";
+  clear:both;
+}
+section, aside {
+  display: inline-block;
+  vertical-align: top;
+}
+section {
+  width: 19.5%;
+  background-color: yellow;
+}
+aside {
+  width: 33%;
+  background-color: red;
+}
+nav {
+  font-size: 1.5rem;
+}
+nav ul {
+  /*margin: 0;*/
+  padding: 0;
+}
+nav li {
+  display: inline-block;
+  padding: 20px;
+}
+nav li:hover {
+  background-color: pink;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6 {
+  display: inline-block;
+  vertical-align: top;
+}
+.col-2 {
+  width: 49.5%;
+}
+.col-10 {
+  display: inline-block;
+  vertical-align: top;
+  width: 9.5%;
+}
