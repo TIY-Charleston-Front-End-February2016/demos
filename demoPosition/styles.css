@@ -1,0 +1,21 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  background-color: grey;
+  width: 80%;
+  margin: 0 auto;
+}
+.column1 {
+  background-color: blue;
+  display: inline-block;
+  vertical-align: top;
+  width: 70%;
+}
+.column2 {
+  background-color: red;
+  vertical-align: top;
+  display: inline-block;
+  width: 29%;
+}
