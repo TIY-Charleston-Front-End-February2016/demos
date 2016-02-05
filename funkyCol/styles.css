@@ -1,0 +1,42 @@
+body {
+  background-color: lightgrey;
+}
+.holder {
+  margin: 50px auto;
+  width: 80%;
+}
+.row {
+  width: 100%;
+  clear: both;
+}
+.row:after, .row:before {
+  content: '';
+  clear: both;
+}
+.col-7, .col-3, .col-5, .col-10 {
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid black;
+}
+.col-5 {
+  width: 49%;
+}
+.col-10 {
+  width: 100%;
+}
+.col-7 {
+  width: 69%;
+}
+.col-3 {
+  width: 29%;
+}
+.red, .blue {
+  width: 200px;
+  height: 200px;
+}
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
