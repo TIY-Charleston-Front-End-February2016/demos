@@ -1,0 +1,30 @@
+header {
+  width: 100%;
+  background-image: url('../images/woody1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  background-position-y: -214px;
+}
+
+#title {
+  margin: 0;
+  font-size: 8em;
+  color: #FFF;
+  position: relative;
+  top: -325px;
+  left: 20%;
+  span {
+    font-weight: 100;
+  }
+}
+
+div.overlay {
+  background-color: #549431;
+  height: 450px;
+  opacity: 0.2;
+}
+
+h5.photo-title {
+  padding-left: 47%;
+}

@@ -1,0 +1,20 @@
+aside {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #25705A;
+  border-right: 3px solid $woodyGreen;
+  border-bottom: 3px solid $woodyGreen;
+  min-height: 1000px;
+  .bio-image, .bio-text {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .bio-image {
+    img {
+      width: 100%;
+      border-radius: 100%;
+      margin-top: 5%;
+    }
+  }
+}

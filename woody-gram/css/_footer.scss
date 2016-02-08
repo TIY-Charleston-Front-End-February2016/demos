@@ -1,0 +1,22 @@
+footer {
+  margin: 0;
+  vertical-align: middle;
+  display: inline-block;
+  width: 100%;
+  background-color: #214E09;
+  color: #FFF;
+  .foot-img, .foot-text {
+    width: 20%;
+    display: inline-block;
+    height: 100px;
+  }
+  p {
+    display: inline-block;
+  }
+  img {
+    position: relative;
+    border: 0;
+    left: 16px;
+    top: 7px;
+  }
+}

@@ -1,0 +1,36 @@
+@media (min-width: 0px) and (max-width: 760px) {
+  header {
+    background-position-y: 0;
+    background-position-x: -100px;
+  }
+
+  #title {
+    font-size: 2em;
+    position: relative;
+    top: -412px;
+    left: 12px;
+  }
+
+  aside {
+    display: inline-block;
+    width: 100%;
+    min-height: 0px;
+    border: 3px solid $woodyGreen;
+    .bio-image {
+      display: none;
+    }
+  }
+
+  section.main-content {
+    width: 100%;
+    .col-2 {
+      width: 100%;
+    }
+  }
+
+  footer {
+    .foot-img {
+      margin-right: 10%;
+    }
+  }
+}
