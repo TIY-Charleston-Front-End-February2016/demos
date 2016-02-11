@@ -1,0 +1,36 @@
+.box {
+  -ms-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  padding: 10px;
+  display: inline-block;
+  margin: 10px;
+  width: 200px;
+  background-color: #08bf31; }
+
+h1 {
+  color: brown; }
+
+.message, .alert-msg, .success-msg {
+  display: block;
+  width: 50%;
+  margin: 10px auto;
+  padding: 20px;
+  border: 1px solid black;
+  -ms-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+  .message p, .alert-msg p, .success-msg p {
+    font-size: .8rem; }
+
+.alert-msg {
+  background-color: red;
+  color: white;
+  border: 2px solid red; }
+
+.success-msg {
+  background-color: green;
+  color: white;
+  border: 2px solid green; }

@@ -1,0 +1,8 @@
+
+@mixin borderRad ($rad: 100px) {
+
+  -ms-border-radius: $rad / 2;
+  -moz-border-radius: $rad / 2;
+  -webkit-border-radius: $rad / 2;
+  border-radius: $rad / 2;
+}

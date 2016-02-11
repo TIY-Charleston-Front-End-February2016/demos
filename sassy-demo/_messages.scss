@@ -1,0 +1,24 @@
+.message {
+  display: block;
+  width: 50%;
+  margin: 10px auto;
+  padding: 20px;
+  p {
+    font-size: .8rem;
+  }
+  border: 1px solid black;
+  @include borderRad(10px);
+}
+
+.alert-msg {
+  @extend .message;
+  background-color: red;
+  color: white;
+  border: 2px solid red;
+}
+.success-msg {
+  @extend .message;
+  background-color: green;
+  color: white;
+  border: 2px solid green;
+}
