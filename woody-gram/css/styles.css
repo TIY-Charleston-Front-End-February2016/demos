@@ -92,7 +92,8 @@ section .col-2 img {
 @media (min-width: 0px) and (max-width: 760px) {
   header {
     background-position-y: 0;
-    background-position-x: -100px; }
+    background-position-x: -100px;
+    background-size: auto; }
   #title {
     font-size: 2em;
     position: relative;
