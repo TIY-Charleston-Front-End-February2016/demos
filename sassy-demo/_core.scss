@@ -1,0 +1,13 @@
+
+.box {
+  @include borderRad();
+  padding: 10px;
+  display: inline-block;
+  margin: 10px;
+  width: 200px;
+  background-color: darken($limegreen, 10%);
+  }
+
+h1 {
+  color: $poopy;
+}
