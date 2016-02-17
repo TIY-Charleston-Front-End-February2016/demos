@@ -1,0 +1,14 @@
+{
+  "name": "map-filter-reduce",
+  "homepage": "https://github.com/TIY-Charleston-Front-End-February2016/demos",
+  "authors": [
+    "Nathan Hall <nathan.mh@gmail.com>"
+  ],
+  "description": "demo for underscore",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "dependencies": {
+    "underscore": "^1.8.3"
+  }
+}

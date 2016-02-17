@@ -75,3 +75,7 @@ items.filter(function(el) {
 });
 
 document.getElementById('answer6').innerHTML = giantList;
+
+
+
+_.chain(items).filter(function(item,idx,arr) { return item.price > 14 && item.price < 18 }).sortBy(function(item) {return item.price}).pluck('title').value();
