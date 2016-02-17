@@ -1,3 +1,7 @@
+body {
+  background-color: pink;
+}
+
 header {
   width: 100%;
   background-color: lightblue;
@@ -5,6 +9,8 @@ header {
 }
 
 header h4 {
+  position: relative;
+  top: 24px;
   margin: 0;
   display: inline-block;
   margin-left: 3%;
@@ -13,11 +19,18 @@ header h4 {
 header ul {
   display: inline-block;
   margin-left: 80%;
+  position: relative;
+  bottom: 9px;
 }
 
 header ul li {
   display: inline-block;
   color: white;
+}
+
+header ul li:hover {
+  text-decoration: underline;
+  font-size: 1.15em;
 }
 
 section {
@@ -28,18 +41,23 @@ section {
   padding-top: 1%;
 }
 
+section ul {
+  background-color: #fff;
+  border: 1px solid lightblue;
+  margin: 1%;
+}
+
 section ul li:first-child {
   list-style-type: none;
   text-align: center;
-  color: #fff;
 }
 
 section ul li {
   list-style-type: none;
-  color: #fff;
+  color: lightblue;
 }
 
-section ul li:last-child {
+section ul li h3 {
   font-size: 2em;
 }
 
@@ -56,6 +74,9 @@ aside {
 
 aside input[type="text"] {
   width: 100%;
+  height: 25px;
+  position: relative;
+  bottom: 5px;
 }
 
 aside input[type="submit"] {
@@ -63,10 +84,13 @@ aside input[type="submit"] {
   width: 40%;
   background-color: lightblue;
   color: #fff;
+  font-size: 2em;
+  margin-left: 30%;
 }
 
 aside textarea {
   width: 100%;
+  margin: 13px 0;
 }
 
 .show-me {
@@ -75,4 +99,9 @@ aside textarea {
 
 .dont-show-me {
   display: none;
+}
+
+#about-page {
+  background-color: white;
+  text-align: center;
 }

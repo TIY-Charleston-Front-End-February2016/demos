@@ -12,9 +12,9 @@ function constructBlogHtml() {
   return giantStr;
 }
 
-function createBlogPostStr(post,idx) {
+function createBlogPostStr(post) {
   var postsHtmlStr = "";
-  postsHtmlStr += "<ul><li><h3>"+ parseInt((idx + 2)) +"  </h3><h3>).  Title: " + post.title + "</h3></li>";
+  postsHtmlStr += "<ul><li><h3> Title: " + post.title + "</h3></li>";
   postsHtmlStr += "<li><p>" + post.body + "</p></li>";
   postsHtmlStr += "<li><h6>" + post.author + "</h6></li>";
   postsHtmlStr += "</ul>"
@@ -42,7 +42,7 @@ function grabPostSubmission() {
 $('input[type="submit"]').click(function(event) {
   event.preventDefault();
   var post = grabPostSubmission();
-  var blogStr = createBlogPostStr(post,4)
+  var blogStr = createBlogPostStr(post)
   appendStrToElement(blogStr,$('section'));
   return
 })
@@ -51,12 +51,15 @@ $('header li:first-child').click(function(event) {
   event.preventDefault();
   $about = $('#about-page');
   $blogs = $('#blogs');
+  $headerFirstLI = $('header li:first-child')
   if($about.hasClass('dont-show-me')) {
     $about.removeClass('dont-show-me');
     $blogs.addClass('dont-show-me');
+    $headerFirstLI.text('Back');
   } else {
     $blogs.removeClass('dont-show-me');
     $about.addClass('dont-show-me');
+    $headerFirstLI.text('About');
   }
 
 });
