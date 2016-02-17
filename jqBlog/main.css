@@ -1,0 +1,78 @@
+header {
+  width: 100%;
+  background-color: lightblue;
+  color: white;
+}
+
+header h4 {
+  margin: 0;
+  display: inline-block;
+  margin-left: 3%;
+}
+
+header ul {
+  display: inline-block;
+  margin-left: 80%;
+}
+
+header ul li {
+  display: inline-block;
+  color: white;
+}
+
+section {
+  width: 70%;
+  display: inline-block;
+  vertical-align: top;
+  background-color: pink;
+  padding-top: 1%;
+}
+
+section ul li:first-child {
+  list-style-type: none;
+  text-align: center;
+  color: #fff;
+}
+
+section ul li {
+  list-style-type: none;
+  color: #fff;
+}
+
+section ul li:last-child {
+  font-size: 2em;
+}
+
+section ul li h3 {
+  display: inline-block;
+}
+
+aside {
+  padding-top: 2%;
+  width: 29%;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+aside input[type="text"] {
+  width: 100%;
+}
+
+aside input[type="submit"] {
+  display: block;
+  width: 40%;
+  background-color: lightblue;
+  color: #fff;
+}
+
+aside textarea {
+  width: 100%;
+}
+
+.show-me {
+  display: block;
+}
+
+.dont-show-me {
+  display: none;
+}
