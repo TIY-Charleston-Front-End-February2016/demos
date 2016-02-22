@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+header, footer {
+  background-color: lightgrey;
+  display:block;
+  width: 100%;
+}
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+section, aside {
+  display: inline-block;
+  vertical-align: top;
+}
+section {
+  display: none;
+  background-color: blue;
+  width: 80%;
+}
+
+aside {
+  background-color: yellow;
+  width: 19%;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+ul > li {
+  display: inline-block;
+  padding: 40px;
+}
+ul > li:hover {
+  background-color: white;
+}
+
+article {
+  margin: 20px;
+  padding: 10px;
+  color: white;
+}
+.active {
+  display: inline-block;
+}
+.blog {
+  background-color: red;
+}
