@@ -94,6 +94,10 @@ aside textarea {
   margin: 13px 0;
 }
 
+aside div {
+  margin-top: 10px;
+}
+
 .show-me {
   display: block;
 }

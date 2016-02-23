@@ -5,6 +5,13 @@
     <title>JQBlog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="main.css" media="screen" title="no title" charset="utf-8">
+    <script type="text/template" id="postTmpl">
+      <ul>
+        <li><h3> Title: <%= title %></h3></li>
+        <li><p><%= body %></p></li>
+        <li><h6> <%= author %></h6></li>
+      </ul>
+    </script>
   </head>
   <body>
 
@@ -33,6 +40,9 @@
           <input type="text" name="author" placeholder="Author">
           <input type="submit" name="Submit">
         </form>
+        <div class="search">
+          <input type="text" name="name" value="" placeholder="Search by Tags">
+        </div>
       </aside>
 
     </div>
@@ -52,7 +62,6 @@
 
     <script src="bower_components/underscore/underscore.js" charset="utf-8"></script>
     <script src="bower_components/jquery/dist/jquery.js" charset="utf-8"></script>
-    <script src="repos.js" charset="utf-8"></script>
     <script src="blog-post.js" charset="utf-8"></script>
     <script src="main.js" charset="utf-8"></script>
   </body>
