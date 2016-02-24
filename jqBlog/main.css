@@ -110,3 +110,11 @@ aside div {
   background-color: white;
   text-align: center;
 }
+
+.edit-post, .delete-post {
+  width: 100px;
+  margin: 0 5px;
+  background-color: pink;
+  border-radius: 15px;
+  color: #666;
+}
