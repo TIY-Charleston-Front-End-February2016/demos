@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.home, .albumView {
+  display: none; }
+
+.home {
+  width: 90%;
+  margin: 0 auto;
+  padding: 15px;
+  background: lightgrey; }
+
+.current {
+  display: block; }
+
+article {
+  display: inline-block;
+  width: 32.3%; }
+  article img {
+    width: 150px; }
