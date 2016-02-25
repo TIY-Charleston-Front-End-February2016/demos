@@ -18,56 +18,64 @@ var templates = {
   ].join("")
 }
 
-function getPosts() {
-  return posts;
-}
-function addPost(newPost) {
-  posts.push(newPost);
-}
-function deletePost(idx) {
-  posts.splice(idx, 1);
-}
-function editPost(idx) {
-  // fill in.
-}
-
-function addPostToDom(postData, templateStr, $target) {
-    var tmpl = _.template(templateStr);
-    $target.append(tmpl(postData));
-}
-
-function addAllPosts(arr) {
-  $('section').html('');
-  _.each(getPosts(), function (el, idx) {
-    el.idx = idx;
-    addPostToDom(el, templates.post, $('section'));
-  })
-}
-function getPostFromDom() {
-  var title = $('input[name="title"]').val();
-  var content = $('input[name="content"]').val();;
-  return {
-    title: title,
-    content: content
-  }
-}
-
 $(document).ready(function () {
-  addAllPosts(posts);
-
-  $('form').on('submit', function (event) {
-    event.preventDefault();
-    var newPost = getPostFromDom();
-    console.log(newPost);
-      addPost(newPost);
-      addAllPosts(getPosts());
-      $('input').val('');
-  });
-
-  $('section').on('click', '.delete', function (event) {
-    var idx = $(this).closest('article').data('idx');
-    deletePost(idx);
-    addAllPosts(getPosts());
-  });
-
+  myBlog.init();
 });
+
+
+var myBlog = {
+  init: function () {
+    myBlog.initEvents();
+    myBlog.initStyling();
+  },
+  initEvents: function () {
+    $('form').on('submit', myBlog.submitPost);
+    $('section').on('click', '.delete', myBlog.deletePostFromDom);
+
+  },
+  initStyling: function () {
+    myBlog.addAllPosts();
+  },
+  submitPost: function (event) {
+    event.preventDefault();
+    var   newPost = myBlog.getPostFromDom();
+    console.log(newPost);
+      myBlog.addPost(newPost);
+      myBlog.addAllPosts(myBlog.getPosts());
+      $('input').val('');
+  },
+  getPostFromDom: function getPostFromDom() {
+    var title = $('input[name="title"]').val();
+    var content = $('input[name="content"]').val();;
+    return {
+      title: title,
+      content: content
+    }
+  },
+  deletePostFromDom: function (event) {
+    var idx = $(this).closest('article').data('idx');
+    myBlog.deletePost(idx);
+    myBlog.addAllPosts();
+  },
+  addAllPosts: function () {
+    $('section').html('');
+    _.each(myBlog.getPosts(), function (el, idx) {
+      el.idx = idx;
+      var tmpl = _.template(templates.post);
+      $('section').append(tmpl(el));
+      // addPostToDom(el, templates.post, $('section'));
+    })
+  },
+  getPosts: function getPosts() {
+    return posts;
+  },
+  addPost: function addPost(newPost) {
+    posts.push(newPost);
+  },
+  deletePost: function deletePost(idx) {
+    posts.splice(idx, 1);
+  },
+  editPost: function editPost(idx) {
+    // fill in.
+  }
+};
