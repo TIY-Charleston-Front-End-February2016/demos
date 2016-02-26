@@ -4,8 +4,8 @@ var templates = {
        "<h2><%= title %></h2>",
        "<p><%= content %></p>",
        "<div class='editing'>",
-       "<input type='text' name='editTitle' value='<%= title %>'>",
-       "<input type='text' name='editContent' value='<%= content %>'>",
+       "<input type='text' class='editTitle' value='<%= title %>'>",
+       "<input type='text' class='editContent' value='<%= content %>'>",
        "<button class='submitEdit'>Submit Edit</button>",
        "</div>",
        "<button class='showEdit'>Edit</button>",
@@ -119,6 +119,7 @@ var myBlog = {
   editPost: function editPost(editedPostObj) {
     var id = editedPostObj._id;
     delete editedPostObj._id;
+    console.log('obj should not have _id: ', editedPostObj);
     $.ajax({
       url: myBlog.url + '/' + id,
       method: 'PUT',
