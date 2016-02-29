@@ -4,7 +4,7 @@ $(function () {
 
 var page = {
   init: function () {
-    // im just calling this for demo purposes, but you probably are wiring up other things as well, so you'll likely call .init() instead.
+    // im just calling this for demo purposes, but you probably are wiring up other things as well, so you'll likely call .initEvents() and/or .initStyling() instead.
     page.getLocation();
   },
   initStyling: function () {},
