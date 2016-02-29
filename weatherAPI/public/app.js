@@ -1,6 +1,3 @@
-// var apiKey = '854526c92cddcc6edaca6e044dc11acf';
-// var url = 'https://api.forecast.io/forecast/';
-
 var page = {
   url: 'http://localhost:3000/weather/',
   init: function() {

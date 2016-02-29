@@ -8,7 +8,6 @@ var app = express();
 
 app.set('port', process.env.PORT || 3000);
 
-
 app.use(express.static(__dirname + "/public"))
 app.use(bodyParser.json());
 
@@ -25,9 +24,6 @@ app.get('/weather/:lat/:long', function(req,res,next){
     res.send(JSON.parse(response.body));
   });
 });
-
-
-
 
 app.listen(port, function() {
   console.log(" LISTENING ON PORT " + port);
