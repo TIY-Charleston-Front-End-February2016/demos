@@ -12,6 +12,7 @@ var page = {
   getLocation: function () {
     navigator.geolocation.getCurrentPosition(page.onPosition);
   },
+  // we're creating this onPosition function so that we can call ajax when we get the users' current postion
   onPosition: function (coordsObj) {
     console.log('this is the object containing lat and lng: ', coordsObj);
     $.ajax({
@@ -27,9 +28,11 @@ var page = {
       }
     });
   },
+  // we're using this getForecast function to put stuff in our popup or markup, but you can break up how you want.
   getForecast: function (data) {
     console.log('in getForecast data, and its your data, or dada dada - haha!!', data);
   },
+  // similar to the onPosition function, my url is location dependent on coordinates, so im building that dynamically when i have the coords available
   buildForcastUrl: function (coords) {
     return "http://api.openweathermap.org/data/2.5/weather?lat=" +coords.latitude+ "&lon=" + coords.longitude + "&appid=" + page.apiKey;
   }
