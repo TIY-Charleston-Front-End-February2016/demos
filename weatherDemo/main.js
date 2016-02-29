@@ -4,12 +4,14 @@ $(function () {
 
 var page = {
   init: function () {
+    // im just calling this for demo purposes, but you probably are wiring up other things as well, so you'll likely call .init() instead.
     page.getLocation();
   },
   initStyling: function () {},
   initEvents: function () {},
   apiKey: "302367002e0604563f3f122a44eca752",
   getLocation: function () {
+    // this is a native javascript method built into most browsers, the getCurrentPosition takes a function aka callback once the user gives permission to get their location.
     navigator.geolocation.getCurrentPosition(page.onPosition);
   },
   // we're creating this onPosition function so that we can call ajax when we get the users' current postion
