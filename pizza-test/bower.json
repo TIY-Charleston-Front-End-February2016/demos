@@ -1,0 +1,23 @@
+{
+  "name": "pizza-test",
+  "homepage": "https://github.com/TIY-Charleston-Front-End-February2016/demos",
+  "authors": [
+    "Nathan Hall <nathan.mh@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "^1.8.3",
+    "mocha": "^2.4.5",
+    "chai": "^3.5.0"
+  }
+}
