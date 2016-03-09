@@ -1,16 +1,22 @@
 
+
+(function () {
+  console.log('hello');
+})();
+
 // immediately invoked function execution
 
-var page = (function () {
-
+var page = (function page() {
+  console.log(this);
   var myArr = [];
-
+  this.alien = "lilo";
   function addToArr (item) {
 
     myArr.push(item);
   }
 
   function getArr () {
+    console.log("this in getArr", this);
     return myArr;
   }
 
@@ -26,25 +32,11 @@ var page = (function () {
   return {
     add: addToArr,
     get: getArr,
+    alien: this.alien
     // del: publicDelete
   }
 
 })();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //
