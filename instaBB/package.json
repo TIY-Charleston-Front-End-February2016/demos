@@ -1,0 +1,27 @@
+{
+  "name": "instaBB",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "backbone": "^1.3.2",
+    "jquery": "^2.2.1",
+    "material-design-lite": "^1.1.2",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "node-sass": "^3.4.2",
+    "serve": "^1.4.0",
+    "watchify": "^3.7.0"
+  },
+  "scripts": {
+    "serve": "node_modules/.bin/serve",
+    "watch": "node_modules/.bin/serve & node_modules/.bin/node-sass styles/styles.scss styles/styles.css -w & node_modules/.bin/watchify main.js -o bundle.js",
+    "bundle": "node_modules/.bin/browserify main.js -o bundle.js",
+    "test": "echo hello test runner!!",
+    "woody": "say i am woody and i love everyone here"
+  },
+  "author": "Calvin Webster <calweb@gmail.com>",
+  "license": "MIT"
+}
