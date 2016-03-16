@@ -8,5 +8,8 @@ module.exports = {
     '</a>',
   '</div>',
 '</div>'
+  ].join(""),
+  footer: [
+    "<h1>This is a footer</h1>"
   ].join("")
 }

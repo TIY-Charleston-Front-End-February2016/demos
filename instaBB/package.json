@@ -17,8 +17,10 @@
   },
   "scripts": {
     "serve": "node_modules/.bin/serve",
-    "watch": "node_modules/.bin/serve & node_modules/.bin/node-sass styles/styles.scss styles/styles.css -w & node_modules/.bin/watchify main.js -o bundle.js",
     "bundle": "node_modules/.bin/browserify main.js -o bundle.js",
+    "watch": "node_modules/.bin/node-sass styles/styles.scss styles/styles.css -w & node_modules/.bin/watchify main.js -o bundle.js",
+    "start": "npm run watch & npm run serve",
+
     "test": "echo hello test runner!!",
     "woody": "say i am woody and i love everyone here"
   },

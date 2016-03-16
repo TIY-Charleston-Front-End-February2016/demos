@@ -1,7 +1,9 @@
 var Backbone = require('backbone');
 var _ = require('underscore');
+var flickrModel = require('./flickrModel');
 
 module.exports = Backbone.Collection.extend({
+  model: flickrModel,
   url: function () {
     return this.config().buildUrl();
   },
