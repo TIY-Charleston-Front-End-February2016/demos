@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Demo!!</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="main.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div class="container" ng-controller="ControllerOne">
+    <form>
+      <div class="form-group" >
+          <label for="exampleInputEmail1">Email address</label>
+          <input ng-class="{'font-green': user.username === 'dominathan', 'font-red': user.username !== 'dominathan'}" type="text" class="form-control" id="exampleInputEmail1" placeholder="Username" ng-model='user.username'>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-model='user.password'>
+          <div ng-if="password.length < minPassword" class="alert alert-danger">Password must be at least 7 characters</div>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password Confirmation</label>
+          <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password Confirmation" ng-model='user.confirmation'>
+          <div ng-show="user.password === confirmation && password.length >= minPassword" class="alert alert-success">Passwords Match</div>
+        </div>
+
+        <button type="submit" ng-submit="saveUser(user)" class="btn btn-default">Submit</button>
+      </form>
+
+      <input type="text" name="name" value="" ng-model='search' placeholder="Search by Username">
+      <ul ng-repeat="user in users | filter:search"  >
+        <li>Name: {{ user.name }} | Age: {{ user.age }}</li>
+      </ul>
+    </div>
+
+    <script src="bower_components/angular/angular.js" charset="utf-8"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <script src="onlyJs.js" charset="utf-8"></script>
+  </body>
+</html>
