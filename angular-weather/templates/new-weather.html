@@ -1,0 +1,11 @@
+  <h1>Current Weather</h1>
+  <input type="text" ng-model="zip" placeholder="Enter Zip Code">
+  <button class='btn btn-lg btn-success' ng-click="getWeatherCtrl(zip)" name="button">Get Weather</button>
+
+  <img ng-src="{{img}}" alt="" />
+  <ul>
+    <li>Temp: {{temperature}}</li>
+    <li>Wind Speed: {{wind}}</li>
+    <li>Sky Condition: {{sky}}</li>
+    <li>Humidity: {{humidity}}</li>
+  </ul>
