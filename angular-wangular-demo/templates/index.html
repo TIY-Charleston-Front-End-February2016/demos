@@ -1,0 +1,25 @@
+<div class="row">
+  <h1>Create a Wangul!!</h1>
+  <div class="col-md-6">
+    <a href="/#/wanguls/new"><button type="button" class="btn btn-lg btn-primary"name="button">Create New</button></a>
+  </div>
+</div>
+
+
+
+<div ng-repeat="weather in weathers" class="">
+  <p>
+    Temperature: {{ weather.temp }} | Sky: {{ weather.sky }} | Weatherman/woman {{ weather.weatherman}} | Time: {{ weather.timestamp}}
+  </p>
+  <a href="/#/wanguls/{{weather._id}}"><button type="button" name="button">Show</button></a>
+  <a href="/#/wanguls/{{weather._id}}/edit"><button type="button" name="button">Edit</button></a>
+  <button type="button" ng-click="deleteWangul(weather)" name="button">Delete</button>
+  <br>
+  <hr>
+</div>
+
+<div class="" ng-show="getStuff">
+  High {{getStuff.main.temp_max / 10}}
+  Low {{ getStuff.main.temp_min / 10 }}
+
+</div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Wangular Angular</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="main.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body ng-app='wangular'>
+    <div class="container">
+      <div class="">
+        <h1>Welcome To Wangular</h1>
+        <h4>where we talk about weather and stuff</h4>
+      </div>
+      <ng-view></ng-view>
+    </div>
+
+
+
+
+    <script src="bower_components/angular/angular.js" charset="utf-8"></script>
+    <script src="bower_components/angular-route/angular-route.js" charset="utf-8"></script>
+    <script src="app.module.js" charset="utf-8"></script>
+    <script src="controllers/wang.controller.js" charset="utf-8"></script>
+    <script src="controllers/home.controller.js" charset="utf-8"></script>
+    <script src="services/wangular.service.js" charset="utf-8"></script>
+    <script src="services/apiWeather.service.js" charset="utf-8"></script>
+  </body>
+</html>
