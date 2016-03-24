@@ -1,3 +1,6 @@
+var angular = require('angular');
+var angularRoute = require('angular-route');
+
 angular
   .module('wangular',['ngRoute'])
   .config(function($routeProvider) {
@@ -26,3 +29,10 @@ angular
          redirectTo: '/404'
       })
   })
+
+  require('./controllers/home.controller');
+  require('./controllers/wang.controller');
+  require('./services/apiWeather.service');
+  require('./services/wangular.service');
+  require('./services/cacheEngine.service');
+  require('./directives/tempDirective');

@@ -1,16 +1,49 @@
 angular
   .module('wangular')
-  .service('WangulService',function($http) {
+  .service('WangulService',function($http, $q, $cacheFactory) {
     var url = "https://tiny-tiny.herokuapp.com/collections/wanguls";
 
+    var cacheEngine = $cacheFactory('wangular');
+
     function getWanguls() {
-      return $http.get(url)
+      var defer = $q.defer();
+      var cache = cacheEngine.get('wanguls');
+      if(cache) {
+        defer.resolve(cache)
+      } else {
+        $http.get(url).then(function(data) {
+          cacheEngine.put('wanguls', data);
+          defer.resolve(data);
+        });
+      }
+      return defer.promise;
     }
+
     function postWangul(post) {
+
+      var posts = cacheEngine.get('wanguls');
+      if(posts) {
+        posts.push(post)
+      } else {
+        posts = [post];
+      }
+      cacheEngine.remove('wanguls');
+      cacheEngine.put('wanguls',posts);
       return $http.post(url,post);
     }
+
     function showWangul(id) {
-      return $http.get(url + "/" + id)
+      var defer = $q.defer();
+      var cache = cacheEngine.get(id);
+      if(cache) {
+        defer.resolve(cache)
+      } else {
+        $http.get(url + "/" + id).then(function(data) {
+          cacheEngine.put(id,data);
+          defer.resolve(data);
+        })
+      }
+      return defer.promise;
     }
 
     function editWangul(post) {

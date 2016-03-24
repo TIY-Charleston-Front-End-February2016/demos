@@ -1,0 +1,22 @@
+{
+  "name": "angular-wangular-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.module.js",
+  "dependencies": {
+    "angular": "^1.5.2",
+    "bootstrap": "^3.3.6",
+    "angular-route": "^1.5.2"
+  },
+  "devDependencies": {
+    "serve": "^1.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run watch & ./node_modules/.bin/serve",
+    "bundle": "./node_modules/.bin/browserify --entry app.module.js -o bundle.js",
+    "watch": "./node_modules/.bin/watchify --entry app.module.js -o bundle.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

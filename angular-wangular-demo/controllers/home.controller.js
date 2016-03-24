@@ -1,32 +1,28 @@
 angular
   .module('wangular')
-  .controller('HomeController', function($scope,$location,WangulService,ApiWeatherService) {
+  .controller('HomeController', function($scope,$location,WangulService,ApiWeatherService,CacheEngine) {
 
-    ApiWeatherService.getLocation()
-      .then(ApiWeatherService.getWeather)
-      .then(function(data) {
-        console.log(data);
-        $scope.getStuff = data.data;
-      })
-
-
-
-    function initialLoad() {
-      WangulService.getWanguls()
+    if(CacheEngine.get('currentTemp')) {
+      var cache = CacheEngine.get('currentTemp');
+      $scope.getStuff = cache.data;
+    } else {
+      ApiWeatherService.getLocation()
+        .then(ApiWeatherService.getWeather)
         .then(function(data) {
-          console.log(data);
-          $scope.weathers = data.data;
-          window.glob = $scope.weathers;
-      });
+          CacheEngine.put('currentTemp',data);
+          $scope.getStuff = data.data;
+        })
     }
 
-    initialLoad();
+    WangulService.getWanguls()
+      .then(function(data) {
+        $scope.weathers = data.data;
+    });
 
-
-    $scope.deleteWangul = function(obj) {
-      WangulService.deleteWeather(obj._id)
+    $scope.deleteWangul = function(id) {
+      WangulService.deleteWeather(id)
         .then(function(data) {
-          var objId = data.data._id
+          var objId = id
           var objPlace = $scope.weathers.findIndex(function(el,idx,arr) {
             return el._id === objId
           });

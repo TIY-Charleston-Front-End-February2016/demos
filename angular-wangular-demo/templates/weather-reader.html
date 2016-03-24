@@ -1,0 +1,12 @@
+<div class="list-group">
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading">{{ weatherTime }}</h4>
+    <p class="list-group-item-text">
+      Currently, it is {{ weatherTemp }} with {{ weatherSky }}
+    </p>
+    <small>Brought to you by, {{ weatherHuman }} </small>
+    <a href="/#/wanguls/{{weatherId}}"><button type="button" name="button">Show</button></a>
+    <a href="/#/wanguls/{{weatherId}}/edit"><button type="button" name="button">Edit</button></a>
+    <button type="button" ng-click="deleteFunc()" name="button">Delete</button>
+  </a>
+</div>
