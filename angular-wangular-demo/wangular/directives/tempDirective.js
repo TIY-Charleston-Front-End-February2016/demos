@@ -2,7 +2,7 @@ angular
   .module('wangular')
   .directive('weatherReader', function() {
     return {
-      templateUrl: '../templates/weather-reader.html',
+      templateUrl: 'wangular/templates/weather-reader.html',
       restrict: 'E',
       scope: {
         weatherTemp: '@',

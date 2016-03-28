@@ -7,7 +7,7 @@ angular
       post.timestamp = new Date();
       WangulService.newWangulCreation(post)
         .then(function() {
-          $location.path('/');
+          $location.path('/wanguls');
         })
     };
 
@@ -27,7 +27,7 @@ angular
       WangulService.editWangul(editedWangul)
         .then(function(data) {
           console.log("ARE YOU HAPPY?", data);
-          $location.path('/');
+          $location.path('/wanguls');
         })
     };
 

@@ -2,24 +2,16 @@ var angular = require('angular');
 var angularRoute = require('angular-route');
 
 angular
-  .module('wangular',['ngRoute'])
+  .module('weatherApp',[
+    'ngRoute',
+    'wangular',
+    'bloggy',
+    'flickr'])
   .config(function($routeProvider) {
     $routeProvider
       .when('/',{
-        templateUrl: "templates/index.html",
-        controller: "HomeController"
-      })
-      .when('/wanguls/new', {
-        templateUrl: 'templates/new.html',
-        controller: 'WangController'
-      })
-      .when('/wanguls/:wangulId', {
-        templateUrl: 'templates/show.html',
-        controller: "WangController"
-      })
-      .when('/wanguls/:wangulId/edit', {
-        templateUrl: 'templates/edit.html',
-        controller: "WangController"
+        templateUrl: "main.html"
+
       })
       .when('/404',{
         template: '<h1> You messed up, loser </h1>',
@@ -30,9 +22,6 @@ angular
       })
   })
 
-  require('./controllers/home.controller');
-  require('./controllers/wang.controller');
-  require('./services/apiWeather.service');
-  require('./services/wangular.service');
-  require('./services/cacheEngine.service');
-  require('./directives/tempDirective');
+  require('./wangular');
+  require('./blog');
+  require('./flickr');
