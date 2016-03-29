@@ -1,9 +1,8 @@
-
-<article class="" ng-repeat="post in blogPosts">
+<article class="" ng-repeat="post in BlogCtrl.blogPosts">
   <h1>{{ post.title }}</h1>
   <p>
     {{ post.content }}
   </p>
-  <button type="button" ng-click="deletePost(post._id)" name="button">delete</button>
+  <button type="button" ng-click="BlogCtrl.deletePost(post._id)" name="button">delete</button>
   <a href="#/blog/{{post._id}}">read more</a>
 </article>

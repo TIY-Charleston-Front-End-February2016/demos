@@ -1,5 +1,5 @@
 var angular = require('angular');
-var angularRoute = require('angular-route');
+
 
 angular
   .module('weatherApp',[
@@ -21,7 +21,7 @@ angular
          redirectTo: '/404'
       })
   })
-
+  require('angular-route');
   require('./wangular');
   require('./blog');
   require('./flickr');

@@ -1,6 +1,4 @@
 var angular = require('angular');
-var _ = require('underscore');
-var moment = require('moment');
   angular
     .module('flickr')
     .factory('FlickrService', function ($http, moment, _) {

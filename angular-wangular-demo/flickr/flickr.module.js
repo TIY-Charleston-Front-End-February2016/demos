@@ -25,7 +25,7 @@ var moment = require('moment');
 angular
   .module('moment', [])
   .factory('moment', function($window) {
-    return $window._;
+    return moment;
 });
 
 angular
