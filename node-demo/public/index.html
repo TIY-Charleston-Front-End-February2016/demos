@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text" name="name" value="">
+    <button type="button" name="button">submit</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $('button').on('click', function () {
+        var data = $('input').val();
+        var obj = {
+          name: data
+        };
+        $.ajax({
+          url: '/',
+          method: 'POST',
+          data: obj,
+          success: function () {
+            console.log("yay it worked");
+          }
+        });
+
+      })
+    </script>
+  </body>
+</html>
