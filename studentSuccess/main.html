@@ -1,0 +1,10 @@
+<ui-gmap-google-map center="map.center"  zoom="map.zoom">
+    <ui-gmap-markers modelsbyref="false" docluster="false" fit="true" models="students" coords="'coords'" idKey="'id'" click="onClick">
+
+    </ui-gmap-markers>
+</ui-gmap-google-map>
+<input type="text" ng-model="newStudent.address" name="address" placeholder="address" value="">
+<input type="text" ng-model="newStudent.name" name="name" placeholder="name" value="">
+<input type="text" ng-model="newStudent.company" name="name" placeholder="company" value="">
+<input type="text" ng-model="newStudent.title" name="name" placeholder="title" value="">
+<button type="button" ng-click="addStudent(newStudent)" name="button">add student</button>
